@@ -1,1 +1,6 @@
-
+const img = document.createElement('img');
+img.src = 'https://images.search.yahoo.com/search/images;_ylt=AwrFaXjgaRFn_gQD.YBXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BpdnM-?p=man+clipart&fr2=piv-web&type=E210US1348G0&fr=mcafee#id=43&iurl=https%3A%2F%2Fclipart-library.com%2Fnew_gallery%2F54-540236_man-clipart-png-transparent-background-man-clipart-png.png&action=click';
+img.alt = 'Image description';
+img.class = 'my-image-class';
+const paretnElement = document.getElementById('my-image-container');
+parentElement.appendChild(img);
