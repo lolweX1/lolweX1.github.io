@@ -3,19 +3,45 @@
 <head>
   <style>
     #horizontalBar {
-      width: 100 vw;
-      background-color: "black";
-      height: 100 px;
+      width: 100vw;
+      background-color: green;
+	  display: block;
     }
+	.searchBarSpan:hover {
+		background-color: #00aa00;
+	}
+	.searchBarSpan {
+		border: 1px black solid;
+		margin-right: 2px;
+	}
   </style>
 </head>
 <body>
-<h1>Wecome to Simulations</h1>
+<div id="Title"  style="margin: 0; padding: 0;">
+<h1 style="display:inline-block; margin: 0; padding: 0;">Simulations</h1>
+<h3 style="display:inline-block;  margin: 0; padding: 0;"> (and lessons/games)</h3>
+</div>
+
 <div id="horizontalBar">
-  <h3 id="hBar1">Chemistry</h3>
+  <span id="hBar1" class="searchBarSpan" onclick="showSection('chemistry')">Chemistry</span>
+  <span id="hBar2" class="searchBarSpan" onclick="showSection('CS')">Computer Science</span>
+</div>
+
+<div id="Chem" style="display: None;">
+	<h1>Hello</h1>
 </div>
 </body>
-  <script>
-    console.log("testing 1 2 3");
-  </script>
+	<script>
+		const sections = {
+			"chemistry": document.getElementById("hBar1")
+			,"CS": document.getElementById("hBar2")
+		}
+		
+		function showSection(sect) {
+			for (i in Object.keys(sections)) {
+				sections[Object.keys(sections)[i]].display = "None";
+			}
+			sections[
+		}
+	</script>
 </html>
