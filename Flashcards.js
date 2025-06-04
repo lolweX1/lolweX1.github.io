@@ -1,6 +1,8 @@
 	const cards = {
 	"Gunpowder": "led to expansion of territory for land-based empires"
-	,"": ""	
+	,"Grand Canal": "promoted trade and population growth, connected the two largest waterways in china which allowed for trading food back and forth"
+	,"Champa rice":"very sustainable, population boom in china"
+	,"Civil service Exam": "china, meritocracy"
 }
 let count = 0;
 let s = true;
