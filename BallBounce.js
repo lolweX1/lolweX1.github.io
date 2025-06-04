@@ -43,7 +43,7 @@ const canv = document.getElementById("BallBoing");
 			if (ballPos.y+ballVelo.y > canv.height - ballRadius) {
 				ballPos.y = canv.height - ballRadius;
 				ballVelo.y = ballVelo.y * -1 * ballElasticity;
-				console.log(ballVelo.y)
+
 				if (Math.abs(ballVelo.y) < 2) {
 					ballVelo.y = 0;
 				}
