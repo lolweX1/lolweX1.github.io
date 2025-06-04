@@ -2,6 +2,7 @@ const sections = {
 			"chemistry": document.getElementById("Chem")
 			,"biology": document.getElementById("Bio")
 			,"history": document.getElementById("History")
+			,"physics": document.getElementById("Physics")
 		}
 		
 		const classes = {
