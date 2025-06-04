@@ -10,7 +10,6 @@ const sections = {
 		}
 
 		function change(count, height, reverse) {
-			console.log(document.getElementById("historyFlash").style.height);
 			if (count != 0) {
 				rev = reverse;
 				tempHeight = height;
@@ -40,7 +39,6 @@ const sections = {
 			for (i in Object.keys(sections)) {
 				sections[Object.keys(sections)[i]].display = "None";
 			}
-			console.log(sections[sect]);
 			sections[sect].style.display = "block";
 		}
 		
@@ -53,7 +51,6 @@ const sections = {
 			if (document.getElementById("ClassRemove").value != "") {
 				let removeObj = document.getElementById("ClassRemove").value.toLowerCase();
 				if (!classes[removeObj]) {
-					console.log("class is not found");
 				} else {
 					delete classes[removeObj]; //the if else is optional, but i added it bc why not
 				}
@@ -77,7 +74,6 @@ const sections = {
 			if (document.getElementById("StudentRemove").value != "") {
 				let removeObj = document.getElementById("StudentRemove").value.toLowerCase();
 				if (!students[removeObj]) {
-					console.log("class is not found");
 				} else {
 					delete students[removeObj]; //the if else is optional, but i added it bc why not
 				}
@@ -104,7 +100,6 @@ const sections = {
 			/*if (currentNum-1 == 3) {
 				populateSelect();
 			}*/
-			console.log("wtf" + currentNum);
 			document.getElementById("cg_step_" + currentNum).style.display = "none";
 			document.getElementById("cg_step_" + (currentNum-1)).style.display = "inline-block";
 		}
