@@ -3,11 +3,10 @@ function showSection(sect) {
 		sections[Object.keys(sections)[i]].style.display = "None";
 		console.log("yeah")
 	}
-	if (sect == "home") {
-		Hshow = true;
-		HomeUpdate();
+	if (sect != "home") {
+		clearInterval(Hstart);
 	} else {
-		Hshow = false;
+		Hstart = setInterval(HomeUpdate, 20);
 	}
 	sections[sect].style.display = "block";
 }
