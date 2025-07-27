@@ -3,46 +3,12 @@ const sections = {
 	,"biology": document.getElementById("Bio")
 	,"history": document.getElementById("History")
 	,"physics": document.getElementById("Physics")
+	,"home": document.getElementById("Home")
 }
 
 const classes = {
 }
 const students = {
-}
-
-/*function change(count, height, reverse) {
-	if (count != 0) {
-		rev = reverse;
-		tempHeight = height;
-		if (height == 0 && rev == false) {
-			rev = true;
-		}
-		if (rev) {
-			tempHeight += 1;
-		} else {
-			tempHeight -= 1;
-		}
-		document.getElementById("historyFlash").style.height = "20vh";
-		sleep(50);
-		change(count-1, tempHeight, rev)
-	}
-}*/
-
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-	if ((new Date().getTime() - start) > milliseconds){
-	  break;
-	}
-  }
-}
-
-function showSection(sect) {
-	for (i in Object.keys(sections)) {
-		sections[Object.keys(sections)[i]].style.display = "None";
-		console.log("yeah")
-	}
-	sections[sect].style.display = "block";
 }
 
 function log_classes(e) {
