@@ -7,7 +7,7 @@ Hcanvas.height = innerHeight*0.91;
 Hcanvas.style.width = `${Hcanvas.width}px`;
 Hcanvas.style.height = `${Hcanvas.height}px`;
 
-let Hstart = false;
+let Hstart = null;
 
 const Hstars = {
 }
@@ -20,13 +20,14 @@ for (let i = 0; i < 50; i++) {
 }
 
 function HomeUpdate() {
+	console.log("roar");
 	Hc.clearRect(0, 0, Hcanvas.width, Hcanvas.height);
 	Hc.fillStyle = "black";
 	Hc.fillRect(0, 0, Hcanvas.width, Hcanvas.height);
 	Hc.fillStyle = "white";
 	for (let i = 0; i < 50; i++) {
-		let offsetX = Math.random();
-		let offsetY = Math.random();
+		let offsetX = Math.random() * 0.2;
+		let offsetY = Math.random() * 0.1;
 		let neg = Math.floor(Math.random() * 4);
 		Hstars[String(i)][1] += (neg == 1||neg==2)? -offsetX: offsetX;
 		Hstars[String(i)][2] += (neg == 2||neg==3)? -offsetY: offsetY;
@@ -40,9 +41,6 @@ function HomeUpdate() {
 		Hc.arc(Hstars[String(i)][1], Hstars[String(i)][2], Hstars[String(i)][0], 0, Math.PI*2);
 		Hc.fill();
 	}
-	if (Hstart) {
-		HomeUpdate();
-	}
 }
 
-HomeUpdate();
+Hstart = setInterval(HomeUpdate, 20);
