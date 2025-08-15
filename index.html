@@ -2,17 +2,28 @@
 <html>
 <head>
 	<style>
+		html, body {
+			overflow-x: hidden;
+			margin: 0;
+			padding: 0;
+		}
 		#horizontalBar {
 			width: 100vw;
 			background-color: green;
-			display: block;
+			display: flex;
 		}
 		.searchBarSpan:hover {
 			background-color: #00aa00;
 		}
 		.searchBarSpan {
 			border: 1px black solid;
-			margin-right: 2px;
+			margin-right: 1px;
+			margin-left: 1px;
+			flex: auto;
+			text-align: center;
+		}
+		#historyFlash {
+			position: relative;
 		}
 	</style>
 
@@ -31,48 +42,16 @@
 	</div>
 	
 	<div id="horizontalBar">
-	  <span id="hBar1" class="searchBarSpan" onclick="showSection('chemistry')">Chemistry</span>
-	  <span id="hBar2" class="searchBarSpan" onclick="showSection('biology')">Biology</span>
-	  <span id="hBar3" class="searchBarSpan" onclick="showSection('history')">History</span>
-	  <span id="hBar4" class="searchBarSpan" onclick="showSection('physics')">Physics</span>
+		<span id="hBar0" class="searchBarSpan" onclick="showSection('home')">Home</span>
+		<span id="hBar1" class="searchBarSpan" onclick="showSection('chemistry')">Chemistry</span>
+		<span id="hBar2" class="searchBarSpan" onclick="showSection('biology')">Biology</span>
+	  	<span id="hBar3" class="searchBarSpan" onclick="showSection('history')">History</span>
+	  	<span id="hBar4" class="searchBarSpan" onclick="showSection('physics')">Physics</span>
 	</div>
-	
-	<div id = "classes generator">
-	<span id = "cg_step_1">
-		<form onsubmit = "log_classes(event)">
-			<input type="submit" value="Submit">
-			<button onclick="next_cg(1)">next</button><br>
-			<label for="ClassLog">Add Class:</label>
-			<input type="text" id="ClassLog" name="ClassLog"><br>
-			<label for="ClassRemove">Remove Class:</label>
-			<input type="text" id="ClassRemove" name="ClassRemove"><br><br>
-		</form>
-		<h4 id="ClassesAdded"> <b>Class List: </b>
-		</h4>
-	</span>
-	
-	<span id = "cg_step_2" style="display:None;">
-		<form onsubmit = "log_students(event)">
-			<input type="submit" value="Submit">
-			<button onclick="back_cg(2)">back</button>
-			<button onclick="next_cg(2)">next</button><br>
-			<label for="StudentLog">Add Student:</label>
-			<input type="text" id="StudentLog" name="StudentLog"><br>
-			<label for="StudentRemove">Remove Student:</label>
-			<input type="text" id="StudentRemove" name="StudentRemove"><br><br>
-		</form>
-		<h4 id="StudentsAdded"> <b>Student List: </b>
-		</h4>
-	</span>
-	
-	<span id = "cg_step_3" style="display:None;">
-		<form id="myForm">
-			<button type="button" onclick="back_cg(3)">back</button>
-			<button type="button" onclick="next_cg(3)">next</button>
-	    </form>
-	</span>
+
+	<div id="Home" style="display: Block;">
+		<canvas id="HStars"></canvas>	
 	</div>
-	
 	
 	<div id="Chem" style="display: None;">
 		<h1>Hello</h1>	
@@ -92,7 +71,8 @@
 		<canvas id="BallBoing"></canvas>
 	</div>
 </body>
-	<script src = "ClassPlacement.js"></script>
+	<script src = "Index.js"></script>
+	<script src = "Home.js"></script>
 	<script src = "BallBounce.js"></script>
 	<script src = "Flashcards.js"></script>
 </html>

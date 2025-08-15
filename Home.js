@@ -12,6 +12,8 @@ let Hstart = null;
 const Hstars = {
 }
 
+const HIntervalBreak = 100;
+
 for (let i = 0; i < 50; i++) {
 	let randRad = Math.random()*2;
 	let randX = Math.floor(Math.random() * Hcanvas.width)
@@ -20,7 +22,6 @@ for (let i = 0; i < 50; i++) {
 }
 
 function HomeUpdate() {
-	console.log("roar");
 	Hc.clearRect(0, 0, Hcanvas.width, Hcanvas.height);
 	Hc.fillStyle = "black";
 	Hc.fillRect(0, 0, Hcanvas.width, Hcanvas.height);
@@ -43,4 +44,4 @@ function HomeUpdate() {
 	}
 }
 
-Hstart = setInterval(HomeUpdate, 20);
+Hstart = setInterval(HomeUpdate, HIntervalBreak);

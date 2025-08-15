@@ -9,9 +9,9 @@ const cards = {
 let count = 0;
 
 // flashCardWidthChange variables
-let flashCardWidthMax = 30;
+let flashCardWidthMax = 50;
 let flashCardWidthMin = 2;
-let flashCardWidth = 30;
+let flashCardWidth = 50;
 let shrink =true;
 let cycle = false;
 
@@ -29,6 +29,8 @@ function flashUpdate() {
 	document.getElementById("flashText").innerHTML = cards[Object.keys(cards)[count]];
 }
 flashUpdate();
+
+document.getElementById("historyFlash").style.left = 50-(flashCardWidthMax/2) + (flashCardWidthMax-flashCardWidth)/2 + "vw";
 
 function add(c) {
 	count += c;
