@@ -36,9 +36,8 @@
 	</script>
 </head>
 <body>
-	<div id="Title"  style="margin: 0; padding: 0;">
+	<div id="Title"  style="margin: 0; padding: 0; background-color: skyBlue">
 	<h1 style="display:inline-block; margin: 0; padding: 0;">Simulations</h1>
-	<h3 style="display:inline-block;  margin: 0; padding: 0;"> (and lessons/games)</h3>
 	</div>
 	
 	<div id="horizontalBar">
@@ -49,26 +48,34 @@
 	  	<span id="hBar4" class="searchBarSpan" onclick="showSection('physics')">Physics</span>
 	</div>
 
-	<div id="Home" style="display: Block;">
-		<canvas id="HStars"></canvas>	
+	<div id="Home" style="display: Block; background-color: black; position: relative; height: 91vh;">
+		<!--<canvas id="HStars"></canvas>-->
+		<!--<img id="NasaAPOD" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></img>
+		<p id="NasaAPODcredits" style="position: relative; display: inline-block; color: white">credits: </p>-->
 	</div>
 	
 	<div id="Chem" style="display: None;">
-		<h1>Hello</h1>	
+		Under Development
 	</div>
 	<div id="Bio" style="display: None;">
-		<h1>D:</h1>
+		Under Development
 	</div>
 	<div id="History" style="display: None;">
-		<span id = "historyFlash" style="display: block; width: 65vw; height: 40vh; background-color: #eeeeee;" onclick="swap()">
+		<span id = "historyFlash" style="display: block; width: 50vw; height: 40vh; background-color: #eeeeee; position: absolute; top: 40%; transform: translate(-50%, -50%);" onclick="swap()">
 		<h1 id="flashTerm"><h1>
 		<h4 id="flashText" style="display: none"></h4>
 		</span>
-		<button id="back" onclick="add(1)">back</button>
-		<button id="forward" onclick="add(-1)">forward</button>
+		<button id="back" onclick="next(1)" style="position: relative; left: 45%; top:15%; transform: translate(-50%, 0%)">back</button>
+		<button id="forward" onclick="next(-1)" style="position: relative; left: 55%; top: 15%; transform: translate(-50%, 0%)">next</button>
 	</div>
 	<div id="Physics" style="display:None;">
-		<canvas id="BallBoing"></canvas>
+		<canvas id="BallBoing" style="display: inline-block"></canvas>
+		<button onclick="resetBallBounce()" style="display: inline-block; vertical-align: top;">Bounce ball</button>
+		<button onclick="changeWindSpeed(-0.001)" style="display: inline-block; vertical-align: top;">Decrease Wind Speed</button>
+		<button onclick="changeWindSpeed(0.001)" style="display: inline-block; vertical-align: top;">Increase Wind Speed</button>
+		<button onclick="resetBall()" style="display: inline-block; vertical-align: top;">Reset</button>
+		<button onclick="stop()" style="display: inline-block; vertical-align: top;">Stop Ball</button>
+
 	</div>
 </body>
 	<script src = "Index.js"></script>

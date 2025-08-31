@@ -1,4 +1,4 @@
-const Hcanvas = document.getElementById("HStars");
+/*const Hcanvas = document.getElementById("HStars");
 const Hc = Hcanvas.getContext("2d");
 
 //please note that this does not adapt to changes in the window, fix this when you can
@@ -42,6 +42,27 @@ function HomeUpdate() {
 		Hc.arc(Hstars[String(i)][1], Hstars[String(i)][2], Hstars[String(i)][0], 0, Math.PI*2);
 		Hc.fill();
 	}
+}*/
+
+
+/*async function getData() {
+	try {
+		const response = await fetch("https://api.nasa.gov/planetary/apod?api_key=QGycgZ2AhFdLwWEVuGc5HVbPRjlfdGRF4f7PdbJl", {
+			method: "GET"
+		});
+
+		const data = await response.json();
+		document.getElementById("NasaAPOD").src = data["url"];
+		document.getElementById("NasaAPODcredits").innerHTML = "\"" + data["title"] + "\"<br> by " + data["copyright"];
+		setImage("NasaAPOD", "auto", "91vh")
+	} catch (err) {
+		console.log("unable  to fetch image");
+	}
 }
 
-Hstart = setInterval(HomeUpdate, HIntervalBreak);
+function setImage(id, width, height) {
+	document.getElementById(id).style.width = width;
+	document.getElementById(id).style.height = height;
+}
+
+getData();*/

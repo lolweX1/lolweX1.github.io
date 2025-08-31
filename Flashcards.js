@@ -21,7 +21,6 @@ let s = true;
 document.getElementById("historyFlash").addEventListener("dblclick", function (e) {
     e.preventDefault();
   });
-document.getElementById("historyFlash").style.width = flashCardWidthMax + "vw";
 
 // Functions
 function flashUpdate() {
@@ -30,15 +29,19 @@ function flashUpdate() {
 }
 flashUpdate();
 
-document.getElementById("historyFlash").style.left = 50-(flashCardWidthMax/2) + (flashCardWidthMax-flashCardWidth)/2 + "vw";
+document.getElementById("historyFlash").style.width = flashCardWidthMax + "vw";
+document.getElementById("historyFlash").style.left = 50 + "vw";
 
-function add(c) {
+function next(c) {
 	count += c;
 	if (count >= Object.keys(cards).length) {
 		count = 0;
 	}
 	if (count < 0) {
 		count = Object.keys(cards).length-1;
+	}
+	if (!s) {
+		swap(false);
 	}
 	flashUpdate();
 }
@@ -71,7 +74,7 @@ function flashCardWidthChange() {
 		cycle = false;
 	}
 	document.getElementById("historyFlash").style.width = flashCardWidth + "vw";
-	document.getElementById("historyFlash").style.left = 50-(flashCardWidthMax/2) + (flashCardWidthMax-flashCardWidth)/2 + "vw";
+	document.getElementById("historyFlash").style.left = 50 + "vw";
 	if (cycle) {
 		setTimeout(flashCardWidthChange, 2);
 	} else {

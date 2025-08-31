@@ -11,9 +11,9 @@ function showSection(sect) {
 		sections[Object.keys(sections)[i]].style.display = "None";
 	}
 	if (sect != "home") {
-		clearInterval(Hstart);
+		//clearInterval(Hstart);
 	} else {
-		Hstart = setInterval(HomeUpdate, HIntervalBreak);
+		//Hstart = setInterval(HomeUpdate, HIntervalBreak);
 	}
 	sections[sect].style.display = "block";
 }
