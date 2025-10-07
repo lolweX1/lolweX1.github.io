@@ -4,6 +4,7 @@ const sections = {
 	,"history": document.getElementById("History")
 	,"physics": document.getElementById("Physics")
 	,"home": document.getElementById("Home")
+	,"cat": document.getElementById("Cat")
 }
 
 function showSection(sect) {
@@ -14,6 +15,11 @@ function showSection(sect) {
 		//clearInterval(Hstart);
 	} else {
 		//Hstart = setInterval(HomeUpdate, HIntervalBreak);
+	}
+	if (sect == "cat") {
+		animateCatCanvas();
+	} else {
+		cancelAnimationFrame(animateCatCanvas);
 	}
 	sections[sect].style.display = "block";
 }

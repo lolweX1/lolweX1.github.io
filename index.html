@@ -46,6 +46,7 @@
 		<span id="hBar2" class="searchBarSpan" onclick="showSection('biology')">Biology</span>
 	  	<span id="hBar3" class="searchBarSpan" onclick="showSection('history')">History</span>
 	  	<span id="hBar4" class="searchBarSpan" onclick="showSection('physics')">Physics</span>
+		<span id="hBar4" class="searchBarSpan" onclick="showSection('cat')">Cat</span>
 	</div>
 
 	<div id="Home" style="display: Block; background-color: black; position: relative; height: 91vh;">
@@ -77,9 +78,15 @@
 		<button onclick="stop()" style="display: inline-block; vertical-align: top;">Stop Ball</button>
 
 	</div>
+
+	<div id="Cat" style="display:None;">
+		<h2 style="position: absolute;">Take a break, pet a cat!</h2>
+		<canvas id="CatCanvas" style="border: 1px solid black;"></canvas>
+	</div>
 </body>
-	<script src = "Index.js"></script>
 	<script src = "Home.js"></script>
 	<script src = "BallBounce.js"></script>
 	<script src = "Flashcards.js"></script>
+	<script src = "Cat.js"></script>
+	<script src = "Index.js"></script>
 </html>
